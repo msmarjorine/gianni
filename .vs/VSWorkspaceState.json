@@ -8,6 +8,6 @@
     "\\cypress\\e2e\\university",
     "\\cypress\\support"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\cypress\\e2e\\university\\traversing-elements.js",
   "PreviewInSolutionExplorer": false
 }
