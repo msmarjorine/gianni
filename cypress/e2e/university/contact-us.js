@@ -2,6 +2,13 @@
 
 describe("Test Contact Us form via WebdriverUni", () => {
 
+    before(function(){
+        cy.fixture('example').then(function (data) {
+            //this.data = data;
+            globalThis.data = data
+        })
+    })
+
     beforeEach("Open the page", () => {
         cy.visit("http://www.webdriveruniversity.com")
         cy.get("a#contact-us").invoke("removeAttr", "target")
@@ -19,29 +26,29 @@ describe("Test Contact Us form via WebdriverUni", () => {
     })
 
     it("Should be able to submit a successful submission via contact us form", () => {
-        cy.get('input[name="first_name"]').type('Harry')
-        cy.get('input[name="last_name"]').type('Styles')
-        cy.get('input[name="email"]').type('harry@styles.uk')
-        cy.get('textarea[name="message"]').type('Watermelon Sugar High')
+        cy.get('input[name="first_name"]').type(data.first_name)
+        cy.get('input[name="last_name"]').type(data.last_name)
+        cy.get('input[name="email"]').type(data.email)
+        cy.get('textarea[name="message"]').type(data.message)
         cy.get('input[value="SUBMIT"]').click()
         cy.url().should('include', '/contact-form-thank-you.html')
         cy.get('h1').should('have.text', 'Thank You for your Message!')
     });
 
     it("Should not be able to submit a successful submission via contact us form as all fields are required", () => {
-        cy.get('input[name="first_name"]').type('Sam')
-        cy.get('input[name="last_name"]').type('Smith')
-        cy.get('textarea[name="message"]').type('My diamonds stay with you')
+        cy.get('input[name="first_name"]').type(data.first_name)
+        cy.get('input[name="last_name"]').type(data.last_name)
+        cy.get('textarea[name="message"]').type(data.message)
         cy.get('input[value="SUBMIT"]').click()
         cy.url().should('include', '/contact_us.php')
         cy.get('body').should('include.text', 'Error: all fields are required')
     });
 
     it("Should be able to reset a contact us form", () => {
-        cy.get('input[name="first_name"]').type('Harry')
-        cy.get('input[name="last_name"]').type('Styles')
-        cy.get('input[name="email"]').type('harry@styles.uk')
-        cy.get('textarea[name="message"]').type('Watermelon Sugar High')
+        cy.get('input[name="first_name"]').type(data.first_name)
+        cy.get('input[name="last_name"]').type(data.last_name)
+        cy.get('input[name="email"]').type(data.email)
+        cy.get('textarea[name="message"]').type(data.message)
         cy.get('input[value="RESET"]').click()
         cy.get('input[name="first_name"]').should('have.value', "")
         cy.get('input[name="last_name"]').should('have.value', "")

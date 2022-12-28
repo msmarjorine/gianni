@@ -2,8 +2,12 @@
 
 describe("HAndle JS Alerts", () => {
 
-    it("confirm JS alert contains the correct text", () => {
+    beforeEach(() => {
         cy.visit('http://www.webdriveruniversity.com/Popup-Alerts/index.html')
+    })
+
+
+    it("confirm JS alert contains the correct text", () => {
         cy.get('#button1').click()
         cy.on('window:alert', (str) => {
             expect(str).to.equal('I am an alert box!')
@@ -12,7 +16,6 @@ describe("HAndle JS Alerts", () => {
     })
 
     it("confirm JS confirm box works correctly when accepted", () => {
-        cy.visit('http://www.webdriveruniversity.com/Popup-Alerts/index.html')
         cy.get('#button4').click()
         cy.on('window:confirm', (str) => {
             return true;
@@ -22,7 +25,6 @@ describe("HAndle JS Alerts", () => {
     })
 
     it("confirm JS confirm box works correctly when declined", () => {
-        cy.visit('http://www.webdriveruniversity.com/Popup-Alerts/index.html')
         cy.get('#button4').click()
         cy.on('window:confirm', (str) => {
             return false;
@@ -32,7 +34,6 @@ describe("HAndle JS Alerts", () => {
     })
 
     it("confirm JS confirm box using a stub", () => {
-        cy.visit('http://www.webdriveruniversity.com/Popup-Alerts/index.html')
 
         const stub = cy.stub()
         cy.on('window:confirm', stub)

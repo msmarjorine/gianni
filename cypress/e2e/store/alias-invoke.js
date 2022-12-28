@@ -2,8 +2,11 @@
 
 describe("Alias and Invoke", () => {
 
-    it("Validate a specific haircare product", () => {
+    beforeEach(() => {
         cy.visit('https://www.automationteststore.com/')
+    })
+
+    it("Validate a specific haircare product", () => {
         cy.get('ul.categorymenu li a[href*="product/category&path="]').contains('Hair Care').click()
         cy.get('div.fixed_wrapper .prdocutname').eq(0).invoke('text').as('productThumbnail')
         cy.get('@productThumbnail').its('length').should('be.gt', 5)
@@ -12,7 +15,6 @@ describe("Alias and Invoke", () => {
     })
 
     it("Validate the number of products", () => {
-        cy.visit('https://www.automationteststore.com/')
         cy.get('div.thumbnail').its('length').as('productsNumber')
         cy.get('@productsNumber').should('eq', 16)
         cy.get('a.productcart').eq(0).invoke('attr', 'title').as('cartText')
@@ -20,14 +22,12 @@ describe("Alias and Invoke", () => {
     })
 
     it("Validate the header", () => {
-        cy.visit('https://www.automationteststore.com/')
         cy.get('div.navbar-collapse').as('header')
         cy.get('@header').should('be.visible')
         cy.get('@header').should('have.css', 'border-color', 'rgb(16, 16, 16)')
     })
 
     it.only("Calculate total of normal and sale products", () => {
-        cy.visit('https://www.automationteststore.com/')
         cy.get('div.thumbnail').as('productThumbnail')
         //cy.get('@productThumbnail').find('.oneprice').each(($el, index, $list) => {
         //    cy.log($el.text())
