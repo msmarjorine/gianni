@@ -23,3 +23,22 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("selectProduct", productName => {
+    cy.get('div.fixed_wrapper .prdocutname').each(($el, index, $list) => {
+        if ($el.text().includes(productName)) {
+            cy.wrap($el).click()
+        }
+
+    })
+})
+
+Cypress.Commands.add("webdriveruniContactUs", (firstName, lastName, email, message, $selector, textToVerify) => {
+    cy.get('input[name="first_name"]').type(firstName)
+    cy.get('input[name="last_name"]').type(lastName)
+    cy.get('input[name="email"]').type(email)
+    cy.get('textarea[name="message"]').type(message)
+
+    cy.get('input[value="SUBMIT"]').click()
+    cy.get($selector).contains(textToVerify)
+})

@@ -13,14 +13,21 @@ describe("Iterate over elements", () => {
         })
     })
     it("Add specific product to basket", () => {
-        cy.get('div.fixed_wrapper .prdocutname').each(($el, index, $list) => {
-            if ($el.text().includes('Curls to straight Shampoo')) {
-                cy.wrap($el).click()
-                cy.get('ul.productpagecart a').click()
-                cy.url().should('include', 'checkout/cart')
-            }
-            
-        })
+        cy.selectProduct('Curls to straight Shampoo')
+        cy.get('ul.productpagecart a').click()
+        cy.url().should('include', 'checkout/cart')
+    })
+
+    it("Add another specific product to basket", () => {
+        cy.selectProduct('Seaweed Conditioner')
+        cy.get('ul.productpagecart a').click()
+        cy.url().should('include', 'checkout/cart')
+    })
+
+    it("Add the third specific product to basket", () => {
+        cy.selectProduct('Pantene Pro-V Conditioner, Classic Care')
+        cy.get('ul.productpagecart a').click()
+        cy.url().should('include', 'checkout/cart')
     })
 
 
