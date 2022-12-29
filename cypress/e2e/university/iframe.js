@@ -3,7 +3,7 @@
 describe("Handling iFrames and Modals", () => {
 
     it("Handle Webdriveruni iFrame and Module", () => {
-        cy.visit('http://www.webdriveruniversity.com/')
+        cy.visit('/')
         cy.get('a#iframe').invoke('removeAttr', 'target').click()
         cy.get('#nav-title').should('have.text', 'WebdriverUniversity.com (IFrame)')
 

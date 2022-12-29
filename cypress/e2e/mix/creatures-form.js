@@ -8,7 +8,7 @@ describe("Fill the form on eurobolat website", () => {
         })
     })
     it("Should fill the form with user data", () => {
-        cy.visit('https://eurobolat.000webhostapp.com/calendar.html')
+        cy.visit(Cypress.env("bolatUrl") + 'calendar.html')
         cy.get('img[src*="bagniuk"]').should('be.visible')
         cy.get('#username').type(data.name)
         cy.get('#birthyear').type(data.year)

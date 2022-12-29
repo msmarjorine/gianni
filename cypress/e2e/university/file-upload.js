@@ -2,7 +2,7 @@
 
 describe("Verify file uploading feature", () => {
     it("Upload a file to Webdriveruni page", () => {
-        cy.visit('http://www.webdriveruniversity.com/')
+        cy.visit('/')
         cy.get('#file-upload').invoke('removeAttr', 'target').click()
         cy.get('#main-header').should('contain', 'File Upload')
 
@@ -11,7 +11,7 @@ describe("Verify file uploading feature", () => {
         cy.url().should('contain', 'IMG_0210')
     })
     it("Upload no file", () => {
-        cy.visit('http://www.webdriveruniversity.com/')
+        cy.visit('/')
         cy.get('#file-upload').invoke('removeAttr', 'target').click()
         cy.get('#submit-button').click()
         cy.on('window:alert', (str) => {

@@ -3,7 +3,7 @@
 describe("Handling autocomplete dropdown fields", () => {
 
     it("Select specific product via autocomplete list", () => {
-        cy.visit('http://www.webdriveruniversity.com/')
+        cy.visit('/')
         cy.get('#autocomplete-textfield').invoke('removeAttr', 'target').click()
         cy.get('h2.section_header').should('have.text', 'Autocomplete TextField')
 

@@ -3,7 +3,7 @@
 describe("Main page of WebdriverUni", () => {
 
     beforeEach("Open the page", () => {
-        cy.visit("http://www.webdriveruniversity.com")
+        cy.visit("/")
     })
 
     it("Styles and different assertions", () => {

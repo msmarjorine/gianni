@@ -3,7 +3,7 @@
 describe("HAndle JS Alerts", () => {
 
     beforeEach(() => {
-        cy.visit('http://www.webdriveruniversity.com/Popup-Alerts/index.html')
+        cy.visit('Popup-Alerts/index.html')
     })
 
 

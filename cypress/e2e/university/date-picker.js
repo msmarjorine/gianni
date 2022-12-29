@@ -3,7 +3,7 @@
 describe("Test Date Picker page on WebdriverUni", () => {
 
     beforeEach("Open the page", () => {
-        cy.visit("http://www.webdriveruniversity.com")
+        cy.visit("/")
         cy.get("a#datepicker").invoke("removeAttr", "target")
         cy.get("a#datepicker").click()
         cy.title().should('eq', 'WebDriver | Datepicker')

@@ -2,7 +2,7 @@
 
 describe("Handling data in tables", () => {
     beforeEach(() => {
-        cy.visit("http://webdriveruniversity.com/");
+        cy.visit("/");
         cy.get("#data-table").invoke("removeAttr", "target").click({ force: true });
     })
 

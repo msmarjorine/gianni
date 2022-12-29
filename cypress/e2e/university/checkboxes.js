@@ -3,8 +3,7 @@
 describe("Handling checkboxes", () => {
 
     beforeEach(() => {
-        cy.visit('http://www.webdriveruniversity.com/')
-        cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click()
+        cy.navigate_to_uni_checkbox_page()
         cy.get('#main-header h1').should('have.text', 'Dropdown Menu(s), Checkboxe(s) & Radio Button(s)')
     })
 
@@ -24,7 +23,7 @@ describe("Handling checkboxes", () => {
 describe("Handling radiobuttons", () => {
 
     beforeEach(() => {
-        cy.visit('http://www.webdriveruniversity.com/')
+        cy.visit('/')
         cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click()
         cy.get('#main-header h1').should('have.text', 'Dropdown Menu(s), Checkboxe(s) & Radio Button(s)')
     })
@@ -44,7 +43,7 @@ describe("Handling radiobuttons", () => {
 describe("Handling dropdown menus", () => {
 
     beforeEach(() => {
-        cy.visit('http://www.webdriveruniversity.com/')
+        cy.visit('/')
         cy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click()
         cy.get('#main-header h1').should('have.text', 'Dropdown Menu(s), Checkboxe(s) & Radio Button(s)')
     })

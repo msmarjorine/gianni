@@ -3,7 +3,7 @@
 describe("Some commands that let us do traversing", () => {
 
     beforeEach(() => {
-        cy.visit('https://eurobolat.000webhostapp.com/')
+        cy.visit(Cypress.env("bolatUrl"))
     })
 
 
@@ -19,7 +19,7 @@ describe("Some commands that let us do traversing", () => {
         cy.get('section.grid-two').find('.grid-item-two').find('p').should('have.attr', 'id').and('eq', 'pazanskaya')
     })
 
-    it.only("Find an email", () => {
+    it("Find an email", () => {
         cy.get('#efooter > *').not('#foot3').should('have.css', 'marginLeft', '10px')
     })
 })

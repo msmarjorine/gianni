@@ -1,3 +1,5 @@
+import Homepage_PO from "../../support/pageObjects/university/uni_homepage_po"
+
 /// <reference types="cypress"/>
 
 describe("Test Contact Us form via WebdriverUni", () => {
@@ -10,9 +12,9 @@ describe("Test Contact Us form via WebdriverUni", () => {
     })
 
     beforeEach("Open the page", () => {
-        cy.visit("http://www.webdriveruniversity.com")
-        cy.get("a#contact-us").invoke("removeAttr", "target")
-        cy.get("a#contact-us").click()
+        const homepage_PO = new Homepage_PO();
+        homepage_PO.visitUniContactpage();
+        
         cy.title().should('eq', 'WebDriver | Contact Us')
         cy.get('h2[name="contactme"]').should('have.text', 'CONTACT US')
     })
@@ -37,12 +39,6 @@ describe("Test Contact Us form via WebdriverUni", () => {
     });
 
     it("Should not be able to submit a successful submission via contact us form as all fields are required", () => {
-        //cy.get('input[name="first_name"]').type(data.first_name)
-        //cy.get('input[name="last_name"]').type(data.last_name)
-        //cy.get('textarea[name="message"]').type(data.message)
-        //cy.get('input[value="SUBMIT"]').click()
-        //cy.get('body').should('include.text', 'Error: all fields are required')
-
         cy.webdriveruniContactUs(data.first_name, data.last_name, ' ', data.message, 'body', 'Error: Invalid email address')
     });
 
