@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  projectId: 'uhawz7',
 
   e2e: {
     setupNodeEvents(on, config) {
@@ -14,6 +15,8 @@ module.exports = defineConfig({
         experimentalSessionAndOrigin: true,
         defaultCommandTimeout: 10000,
         pageLoadTimeout: 120000,
+        viewportHeight: 768,
+        viewportWidth: 1366,
         env: {
             gramotaReq: "haricots",
             bolatUrl: "https://eurobolat.000webhostapp.com/"

@@ -3,6 +3,7 @@
 describe("Validate Webdriveruni homepage links", () => {
 
     it("Confirm links redirect to the correct pages", () => {
+        cy.viewport(390, 844)
         cy.visit('/')
         cy.get('a#contact-us').invoke('removeAttr', 'target').click()
         cy.url().should('include', 'contactus.html')

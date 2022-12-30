@@ -16,6 +16,7 @@ describe("Fill the form on eurobolat website", () => {
 
         cy.url().should('contain', data.name).and('contain', data.year)
         cy.get('#rezultat').should('be.visible')
+        cy.screenshot('The page with results of the test')
     })
 
 })

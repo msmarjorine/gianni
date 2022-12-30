@@ -3,14 +3,14 @@
     "",
     "\\cypress",
     "\\cypress\\e2e",
-    "\\cypress\\e2e\\mix",
     "\\cypress\\e2e\\store",
+    "\\cypress\\e2e\\university",
     "\\cypress\\fixtures",
     "\\cypress\\support",
     "\\cypress\\support\\pageObjects",
     "\\cypress\\support\\pageObjects\\store",
     "\\cypress\\support\\pageObjects\\university"
   ],
-  "SelectedNode": "\\cypress\\e2e\\store\\product-page.js",
+  "SelectedNode": "\\cypress.config.js",
   "PreviewInSolutionExplorer": false
 }
