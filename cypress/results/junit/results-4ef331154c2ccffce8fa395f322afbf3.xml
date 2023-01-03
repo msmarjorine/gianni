@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="8.056" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2023-01-03T10:42:59" tests="0" file="cypress\e2e\mix\creatures-form.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="Fill the form on eurobolat website" timestamp="2023-01-03T10:42:59" tests="1" time="8.024" failures="0">
-    <testcase name="Fill the form on eurobolat website Should fill the form with user data" time="4.140" classname="Should fill the form with user data">
-    </testcase>
-  </testsuite>
-</testsuites>

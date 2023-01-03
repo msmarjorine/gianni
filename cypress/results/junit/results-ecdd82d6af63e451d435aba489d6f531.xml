@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="35.854" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2023-01-03T10:42:14" tests="0" file="cypress\e2e\mix\cardinal-cookies.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="Verify Cookie Banner on CardinalPath" timestamp="2023-01-03T10:42:14" tests="1" time="35.824" failures="0">
-    <testcase name="Verify Cookie Banner on CardinalPath The cookie should be set when the banner is closed" time="26.031" classname="The cookie should be set when the banner is closed">
-    </testcase>
-  </testsuite>
-</testsuites>
