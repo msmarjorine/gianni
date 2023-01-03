@@ -37,6 +37,10 @@ module.exports = defineConfig({
         reporterOptions: {
             configFile: 'cypress/reporter-config.json'
         },
+        retries: {
+            runMode: 0,
+            openMode: 1
+        },
         env: {
             gramotaReq: "haricots",
             bolatUrl: "https://eurobolat.000webhostapp.com/"
