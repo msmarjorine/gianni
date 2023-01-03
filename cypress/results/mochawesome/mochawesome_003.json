@@ -1,0 +1,185 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 4,
+    "passes": 3,
+    "pending": 1,
+    "failures": 0,
+    "start": "2023-01-03T11:29:42.903Z",
+    "end": "2023-01-03T11:30:03.149Z",
+    "duration": 20246,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 25,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "dd94cabd-02f2-4d3d-8b55-660ed01820a8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\mix\\each-and-wrap.js",
+      "file": "cypress\\e2e\\mix\\each-and-wrap.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a1c87a9e-dd3c-4188-8d98-e6e48bcee1ea",
+          "title": "Iterate over the list items on eurobolat",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Log all names",
+              "fullTitle": "Iterate over the list items on eurobolat Log all names",
+              "timedOut": null,
+              "duration": 3709,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#emenu li a').each(($el, index, $list) => {\n  cy.log('Section number ' + index + ': ' + $el.text());\n});",
+              "err": {},
+              "uuid": "322a1792-b9ad-402d-ba4d-f10f9583383a",
+              "parentUUID": "a1c87a9e-dd3c-4188-8d98-e6e48bcee1ea",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Go to the History page",
+              "fullTitle": "Iterate over the list items on eurobolat Go to the History page",
+              "timedOut": null,
+              "duration": 1696,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//doesn't work � can be because of cyrillycs?\ncy.get('#emenu li a').each(($el, index, $list) => {\n  if ($el.text().includes('�������')) {\n    cy.wrap($el).click();\n  }\n});",
+              "err": {},
+              "uuid": "1aa6351e-154d-493f-9c73-64fbd170a280",
+              "parentUUID": "a1c87a9e-dd3c-4188-8d98-e6e48bcee1ea",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "322a1792-b9ad-402d-ba4d-f10f9583383a",
+            "1aa6351e-154d-493f-9c73-64fbd170a280"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5405,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "ba6385f7-9b01-4b22-af67-3d1c3d96b749",
+          "title": "Iterate over the list items on Vention",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Log all names",
+              "fullTitle": "Iterate over the list items on Vention Log all names",
+              "timedOut": null,
+              "duration": 9731,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(1366, 768);\ncy.visit('https://vention.io/');\ncy.get('button[type=\"submit\"] span.icon-close').click({\n  force: true\n});\ncy.get('button.nav-link').each(($el, index, $list) => {\n  cy.log('Section number ' + index + ': ' + $el.text());\n});",
+              "err": {},
+              "uuid": "aa75ac0b-7b36-47a0-b0c5-fa3430e4e786",
+              "parentUUID": "ba6385f7-9b01-4b22-af67-3d1c3d96b749",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Go to the Designs page",
+              "fullTitle": "Iterate over the list items on Vention Go to the Designs page",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Expected to find element: button.nav-link, but never found it.\ncy.viewport(1366, 768);\ncy.get('button.nav-link').each(($el, index, $list) => {\n  if ($el.text().includes('Designs')) {\n    cy.wrap($el).click();\n    cy.get('a.link-column-item-link[href*=\"category=MT\"]').click();\n  }\n});\ncy.get('h1.listing-page-heading').should('have.text', 'Machine Tending ');",
+              "err": {},
+              "uuid": "430048f2-50a5-41be-84b8-cece847c0c26",
+              "parentUUID": "ba6385f7-9b01-4b22-af67-3d1c3d96b749",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "aa75ac0b-7b36-47a0-b0c5-fa3430e4e786"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "430048f2-50a5-41be-84b8-cece847c0c26"
+          ],
+          "duration": 9731,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

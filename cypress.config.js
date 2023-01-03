@@ -1,11 +1,11 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  projectId: 'uhawz7',
+    projectId: 'uhawz7',
 
-  e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+    e2e: {
+        setupNodeEvents(on, config) {
+            // implement node event listeners here
         },
         specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
         //excludeSpecPattern: "cypress/e2e/mix/*.js",
@@ -17,11 +17,15 @@ module.exports = defineConfig({
         pageLoadTimeout: 120000,
         viewportHeight: 768,
         viewportWidth: 1366,
+        reporter: 'cypress-multi-reporters',
+        reporterOptions: {
+            configFile: 'cypress/reporter-config.json'
+        },
         env: {
             gramotaReq: "haricots",
             bolatUrl: "https://eurobolat.000webhostapp.com/"
         }
     },
-    
+
 });
 

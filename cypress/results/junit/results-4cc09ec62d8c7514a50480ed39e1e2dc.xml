@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="19.465" tests="4" failures="0" skipped="1">
+  <testsuite name="Root Suite" timestamp="2023-01-03T10:43:12" tests="0" file="cypress\e2e\mix\each-and-wrap.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Iterate over the list items on eurobolat" timestamp="2023-01-03T10:43:12" tests="2" time="6.706" failures="0">
+    <testcase name="Iterate over the list items on eurobolat Log all names" time="2.822" classname="Log all names">
+    </testcase>
+    <testcase name="Iterate over the list items on eurobolat Go to the History page" time="1.575" classname="Go to the History page">
+    </testcase>
+  </testsuite>
+  <testsuite name="Iterate over the list items on Vention" timestamp="2023-01-03T10:43:19" tests="2" time="12.729" failures="0">
+    <testcase name="Iterate over the list items on Vention Log all names" time="9.201" classname="Log all names">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="6.393" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-01-03T10:44:01" tests="0" file="cypress\e2e\mix\search-on-gramota.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Make a search request using the custom command" timestamp="2023-01-03T10:44:01" tests="1" time="6.361" failures="0">
+    <testcase name="Make a search request using the custom command Make and verify a search request" time="3.869" classname="Make and verify a search request">
+    </testcase>
+  </testsuite>
+</testsuites>

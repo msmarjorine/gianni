@@ -4,11 +4,23 @@
   "description": "Cypress Udemy course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "triggerAllTests-headless": "npx cypress run -b chrome",
+    "triggerAllTests-headed": "npx cypress run -b chrome --headed",
+    "triggerAllTests-cloud": "npx cypress run -b chrome --record --key a9b9fff1-3857-488e-b405-d55029919dc0",
+    "triggerAllTests-uni": "npx cypress run -b chrome --spec 'cypress/e2e/university/*'",
+    "triggerAllTests-mix": "npx cypress run -b chrome --spec 'cypress/e2e/mix/*'",
+    "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
+    "mochawesome-merge": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
+    "openTestRunner": "npx cypress open"
   },
   "author": "msmarjorine",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^11.1.0"
+    "cypress": "^11.1.0",
+    "cypress-multi-reporters": "^1.6.2",
+    "mocha-junit-reporter": "^2.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.2",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }

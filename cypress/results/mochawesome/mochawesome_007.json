@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-01-03T11:30:59.866Z",
+    "end": "2023-01-03T11:31:08.609Z",
+    "duration": 8743,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "03519ff3-9431-4872-b939-cf8ffed72484",
+      "title": "",
+      "fullFile": "cypress\\e2e\\mix\\traversing-bolat.js",
+      "file": "cypress\\e2e\\mix\\traversing-bolat.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c6aa6f65-3a94-43cf-97b0-3c77cdd9af81",
+          "title": "Some commands that let us do traversing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Accessing elements in nav-menu",
+              "fullTitle": "Some commands that let us do traversing Accessing elements in nav-menu",
+              "timedOut": null,
+              "duration": 3096,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#emenu').children('li').should('have.length', 6);\ncy.get('#emenu').children('li').eq(4).as('calendar');\ncy.get('@calendar').children('a').should('have.attr', 'href').and('include', 'calendar');\ncy.get('a[href*=\"eurotrips\"]').closest('ul').should('have.attr', 'id').and('eq', 'emenu');",
+              "err": {},
+              "uuid": "79853667-8417-433b-91a1-58a56444a6b8",
+              "parentUUID": "c6aa6f65-3a94-43cf-97b0-3c77cdd9af81",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Find a quote",
+              "fullTitle": "Some commands that let us do traversing Find a quote",
+              "timedOut": null,
+              "duration": 1513,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('section.grid-two').find('.grid-item-two').find('p').should('have.attr', 'id').and('eq', 'pazanskaya');",
+              "err": {},
+              "uuid": "07f40f8f-85e0-4ecd-8252-d1fea9a8e736",
+              "parentUUID": "c6aa6f65-3a94-43cf-97b0-3c77cdd9af81",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Find an email",
+              "fullTitle": "Some commands that let us do traversing Find an email",
+              "timedOut": null,
+              "duration": 1327,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#efooter > *').not('#foot3').should('have.css', 'marginLeft', '10px');",
+              "err": {},
+              "uuid": "d3d50f48-d34a-4cbc-8661-d7ba747dfd4f",
+              "parentUUID": "c6aa6f65-3a94-43cf-97b0-3c77cdd9af81",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "79853667-8417-433b-91a1-58a56444a6b8",
+            "07f40f8f-85e0-4ecd-8252-d1fea9a8e736",
+            "d3d50f48-d34a-4cbc-8661-d7ba747dfd4f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5936,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
