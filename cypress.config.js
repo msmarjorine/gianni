@@ -4,12 +4,10 @@ const path = require('path');
 
 function getConfigurationByFile(file) {
     const pathToConfigFile = path.resolve('config', `${file}.json`);
-
     if (!fs.existsSync(pathToConfigFile)) {
         console.log("No custom config file found.");
         return {};
     }
-
     return fs.readJson(pathToConfigFile)
 }
 
@@ -33,6 +31,8 @@ module.exports = defineConfig({
         pageLoadTimeout: 120000,
         viewportHeight: 768,
         viewportWidth: 1366,
+        video: false,
+        videoUploadOnPasses: false,
         reporter: 'cypress-multi-reporters',
         reporterOptions: {
             configFile: 'cypress/reporter-config.json'

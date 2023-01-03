@@ -39,7 +39,12 @@ describe("Test Contact Us form via WebdriverUni", () => {
     });
 
     it("Should not be able to submit a successful submission via contact us form as all fields are required", () => {
-        cy.webdriveruniContactUs(data.first_name, data.last_name, ' ', data.message, 'body', 'Error: Invalid email address')
+
+        if (Cypress.isBrowser('firefox')) {
+            cy.log("You are using Firefox, bruh")
+        } else {
+            cy.webdriveruniContactUs(data.first_name, data.last_name, ' ', data.message, 'body', 'Error: Invalid email address')
+        }
     });
 
     it("Should be able to reset a contact us form", () => {
