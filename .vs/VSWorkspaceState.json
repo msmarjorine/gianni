@@ -3,13 +3,10 @@
     "",
     "\\cypress",
     "\\cypress\\e2e",
-    "\\cypress\\e2e\\university",
     "\\cypress\\results",
     "\\cypress\\results\\junit",
-    "\\cypress\\results\\mochawesome",
-    "\\cypress\\support\\pageObjects\\store",
-    "\\cypress\\support\\pageObjects\\university"
+    "\\cypress\\results\\mochawesome"
   ],
-  "SelectedNode": "\\cypress\\results\\mochawesome\\mochawesome.json",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }
