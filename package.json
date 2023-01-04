@@ -10,6 +10,7 @@
     "triggerAllTests-mix": "npx cypress run --spec 'cypress/e2e/mix/*'",
     "triggerAllTests-cloud": "npx cypress run -b chrome --record --key a9b9fff1-3857-488e-b405-d55029919dc0",
     "triggerStoreTests-cloud": "npx cypress run --spec 'cypress/e2e/store/*' -b chrome --record --key a9b9fff1-3857-488e-b405-d55029919dc0",
+    "triggerStoreTests-cloud-parallel": "npx cypress run --spec 'cypress/e2e/store/*' -b chrome --record --key a9b9fff1-3857-488e-b405-d55029919dc0 --parallel",
     "triggerMixTests-cloud": "npx cypress run --spec 'cypress/e2e/mix/*' -b chrome --record --key a9b9fff1-3857-488e-b405-d55029919dc0",
     "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
     "mochawesome-merge": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
