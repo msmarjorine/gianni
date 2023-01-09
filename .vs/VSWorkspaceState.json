@@ -3,10 +3,8 @@
     "",
     "\\cypress",
     "\\cypress\\e2e",
-    "\\cypress\\results",
-    "\\cypress\\results\\junit",
-    "\\cypress\\results\\mochawesome"
+    "\\cypress\\e2e\\mix"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\cypress\\e2e\\mix\\same-origin-policy.js",
   "PreviewInSolutionExplorer": false
 }

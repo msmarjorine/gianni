@@ -8,6 +8,9 @@ class Homepage_PO {
     clickOnHairProducts() {
         cy.get('ul.categorymenu li a[href*="product/category&path="]').contains('Hair Care').click()
     }
+    makeSearchRequest(request) {
+        cy.get("#filter_keyword").type(request).type("{enter}")
+    }
 
 }
 export default Homepage_PO;
