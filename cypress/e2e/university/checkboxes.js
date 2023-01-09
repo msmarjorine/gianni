@@ -1,7 +1,6 @@
 /// <reference types="cypress"/>
 
 describe("Handling checkboxes", () => {
-
     beforeEach(() => {
         cy.navigate_to_uni_checkbox_page()
         cy.get('#main-header h1').should('have.text', 'Dropdown Menu(s), Checkboxe(s) & Radio Button(s)')
@@ -18,6 +17,16 @@ describe("Handling checkboxes", () => {
 
     })
 
+    /* ==== Test Created with Cypress Studio ==== */
+    it('Click on colors radio buttons', function() {
+        /* ==== Generated with Cypress Studio ==== */
+        cy.get('[value="green"]').check();
+        cy.get('[value="blue"]').check();
+        cy.get('[value="yellow"]').check();
+        cy.get('#radio-buttons > [value="orange"]').check();
+        cy.get('[value="purple"]').check();
+        /* ==== End Cypress Studio ==== */
+    });
 })
 
 describe("Handling radiobuttons", () => {

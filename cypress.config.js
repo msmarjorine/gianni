@@ -27,6 +27,7 @@ module.exports = defineConfig({
         chromeWebSecurity: false,
         experimentalModifyObstructiveThirdPartyCode: true,
         experimentalSessionAndOrigin: true,
+        experimentalStudio: true,
         defaultCommandTimeout: 10000,
         pageLoadTimeout: 120000,
         viewportHeight: 768,
