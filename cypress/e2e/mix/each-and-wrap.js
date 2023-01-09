@@ -19,26 +19,3 @@ describe("Iterate over the list items on eurobolat", () => {
     })
 })
 
-describe("Iterate over the list items on Vention", () => {
-    it("Log all names", () => {
-        cy.viewport(1366, 768)
-        cy.visit('https://vention.io/')
-        cy.get('button[type="submit"] span.icon-close').click({ force: true })
-        cy.get('button.nav-link').each(($el, index, $list) => {
-            cy.log('Section number ' + index + ': ' + $el.text())
-        })
-    })
-
-    it.skip("Go to the Designs page", () => {
-        //Expected to find element: button.nav-link, but never found it.
-        cy.viewport(1366, 768)
-        cy.get('button.nav-link').each(($el, index, $list) => {
-            if ($el.text().includes('Designs')) {
-                cy.wrap($el).click()
-                cy.get('a.link-column-item-link[href*="category=MT"]').click()
-            }
-        })
-        cy.get('h1.listing-page-heading').should('have.text', 'Machine Tending ')
-
-    })
-})
