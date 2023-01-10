@@ -3,8 +3,11 @@
     "",
     "\\cypress",
     "\\cypress\\e2e",
-    "\\cypress\\e2e\\mix"
+    "\\cypress\\e2e\\university",
+    "\\cypress\\e2e\\university\\features",
+    "\\cypress\\support",
+    "\\cypress\\support\\step_definitions"
   ],
-  "SelectedNode": "\\cypress\\e2e\\mix\\same-origin-policy.js",
+  "SelectedNode": "\\cypress\\e2e",
   "PreviewInSolutionExplorer": false
 }
